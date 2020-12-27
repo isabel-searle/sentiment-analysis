@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sentiment analysis US post presidential election period</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    
+    </head>
+
+    <body>
+        <main>
+            <h1>Sentiment analysis US post presidential election period</h1>
+            <p>Ironhack final project</p>
+            <hr>
+
+            <section class='cols-1'>
+                <figure>
+                    <h2>2020 US election results</h2>
+                    <iframe src="/map/result_elections" height="600" width="700" ></iframe>
+                    <p>These are the results of the presidential election up to date given the proportion of votes in each state.
+                        The analysis will be done on the basis of these results. The two states with a higher proportion 
+                        of votes in each party are District of Columbia with a 92% of the votes for democratic party and
+                        and Wyoming with a 69% of the votes for republican party, also West Virginia is in a similar level 
+                        to Wyoming with a 68% of the votes for republican party. These states will take the limelight later.
+                    </p>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h2>Sentiment analysis</h2>
+                    <p> This is the average of the sentiment analysis obtained from 286.099 tweets throgh all US
+                        without bias (no filters). This data has been requested throgh the Twitter API from 11th 
+                        of December to 17th of December.
+                        The analysis has been done throgh the nltk pyhton library. The function returns four values: 
+                        <p>- Rate of neutrality </p>
+                        <p>- Rate of negativity</p>
+                        <p>- Rate of positivity</p>
+                        <p>- Compound of both</p>
+                    </p>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Positivity rate by state</h3>
+                    <iframe src="/map/positive_states" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Negativity rate by state</h3>
+                    <iframe src="/map/negative_states" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Compound rate by state</h3>
+                    <iframe src="/map/compound_states" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Positivity rate by county</h3>
+                    <iframe src="/map/positive_counties" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Negativity rate by county</h3>
+                    <iframe src="/map/negative_counties" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Compound rate by county</h3>
+                    <iframe src="/map/compound_counties" height="600" width="700" ></iframe>
+                </figure>
+            </section>
+
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h2>Wordclouds with policy</h2>
+                    <p>The data obtained throgh twitter has been cleaned, organized and filtered in order be to used to make 
+                        some interesting wordclouds with the wordcloud python library. These are the details of the next images:
+                        <p>- A big wordcloud with all the words with higher frequency through US</p>
+                        <p>- The same only throgh District of Columbia </p>
+                        <p>- The same only throgh West Virginia (there were more tweets from WV than from Wyoming</p>
+                        <p>- The same for both but now removing all the common words between them</p>
+                    </p>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>US wordcloud, colours according with the elections result</h3>
+                    <img src="/image/map_satured.png" alt="US_map_satured" style="width:800px;height:500px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>District of Columbia</h3>
+                    <img src="/image/wordcloud_dc.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>West Virginia </h3>
+                    <img src="/image/wordcloud_wv.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>District of Columbia removed common words with West Virginia</h3>
+                    <img src="/image/word_cloud_dc_uncommon.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>West Virginia removed common words with District of Columbia</h3>
+                    <img src="/image/wordcloud_wv_uncommon.png"  style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h2>Wordclouds with sentiment</h2>
+                    <p>Following the sentiment analysis results. The state with the most positive rate without
+                        taking into account the positive rate is Arizona, but on the compound it is Puerto Rico. 
+                        On the other side, the most negative is for Indiana, nonetheless on the compound the most 
+                        negative state is Washington:</p>
+                    </p>
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Washington</h3>
+                    <img src="/image/wordcloud_w.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Puerto Rico</h3>
+                    <img src="/image/wordcloud_pr.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Indiana</h3>
+                    <img src="/image/wordcloud_i.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Arizona </h3>
+                    <img src="/image/wordcloud_a.png" style="width:600px;height:300px;">
+                </figure>
+            </section>
+            <hr>
+            <section class='cols-1'>
+                <figure>
+                    <h3>Correlation between winner party and sentiments </h3>
+                    <img src="/image/corr_heatmap.png" style="width:1200px;height:700px;">
+                </figure>
+            </section>
+            <hr>
+        </main>    
+    </body>
+</html>    

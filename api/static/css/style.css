@@ -1,0 +1,114 @@
+body {
+    background: #173F5F;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(247, 240, 240);
+    font-size: .7em;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+}
+
+html {
+    padding: 20px;
+    font-weight: 300;
+}
+
+main {
+    padding: 60 px;
+}
+
+section {
+    margin-bottom: 40 px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 29px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 29px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 15px;
+    font-weight: 200;
+}
+
+hr {
+    border-color: rgb(209, 201, 201);
+    margin-bottom: 50px;
+}
+
+figure {
+    background-color: #20636b;
+    padding: 10px 10px 30px;
+}
+
+figure p {
+    margin-bottom: 7px;
+    font-size: 15px;
+    text-align:left;
+    margin-top: 7px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+p {
+    margin-bottom: 7px;
+    font-size: 20px;
+    text-align:left ;
+    margin: auto;
+}
+
+iframe {
+    width: 80%;
+    height:400;
+}
+
+ 
+section[class*='cols'] {
+    display: flex;
+    background: #3CAEA3;
+}
+
+.cols-3 > * {
+    width: 33.33%;
+    margin: 10px;
+}
+
+.cols-2 > * {
+    width: 50%;
+    margin: 10px;
+}
+
+.cols-1 > * {
+    width: 80%;
+    margin: 10px;
+    text-align:center;
+    margin: auto;
+}
+
+section {
+    opacity: 1;
+    transition: opacity .3s;
+}
+.running section {
+    opacity: 1;
+}
+
+.loading {
+    position: absolute;
+    border: none;
+}
+
+.loding .running {
+    display: none;
+}
